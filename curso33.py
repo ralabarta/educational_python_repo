@@ -1,6 +1,7 @@
 import numpy as np
-n, p = [int(x) for x in input().split()]
-lista = []
-for i in range(n):
-    lista.append(input().split())
-print(np.array(lista).astype(np.float16).mean(axis=1).round(2))
+r = int(input()) 
+lst = [float(x) for x in input().split()]
+
+arr_ABD = np.array(lst)
+arr_ABD = arr_ABD.reshape(r,int(len(lst)/r))
+print(arr_ABD.round(2))
